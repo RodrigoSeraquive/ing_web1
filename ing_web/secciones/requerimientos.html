@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Requerimientos · NETTPLUS</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor barra-navegacion">
+      <a class="marca" href="../index.html"><img src="../imagenes/logo.svg" alt="Logo"><b>NETT<span>PLUS</span></b></a>
+      <nav>
+        <a href="../index.html">Inicio</a>
+        <a class="enlace-activo" href="requerimientos.html">Requerimientos</a>
+        <a href="pantallas.html">Pantallas</a>
+        <a href="tecnologia.html">Tecnología</a>
+        <a href="datos.html">Datos</a>
+        <a href="decisiones.html">Decisiones</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero corto">
+      <div class="contenedor">
+        <h1>Requerimientos</h1>
+        <p>27 funcionales y 14 no funcionales, redactados con el formato EARS.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="contenedor">
+        <h2>Funcionales (agrupados)</h2>
+        <p>De los 27, 19 son Must Have y forman el MVP.</p>
+        <div class="tabla">
+          <table>
+            <tr><th>Grupo</th><th>Qué cubre</th><th>IDs</th><th>Prioridad</th></tr>
+            <tr><td>Carga y validación</td><td>Subir los Excel, validar columnas, recargar sin duplicados, identificar por cédula, historial de cargas</td><td>RF-001, 002, 007, 008, 021</td><td>Must</td></tr>
+            <tr><td>Consulta diaria</td><td>Atrasos, ausencias, horas extras, vacaciones y permisos del día, con filtros, totales, pendientes y novedades</td><td>RF-003, 010–014, 024, 025</td><td>Must / Should</td></tr>
+            <tr><td>Nómina</td><td>Resumen por colaborador, selección de corte 21–20, exportación a Excel y PDF, formato de columnas</td><td>RF-004, 015, 016, 017</td><td>Must / Should</td></tr>
+            <tr><td>Indicadores</td><td>Atrasos, ausentismo, horas extras, headcount, rotación, altas y bajas, exportación a PDF</td><td>RF-005, 018, 019, 026</td><td>Must / Should</td></tr>
+            <tr><td>Seguridad y usuarios</td><td>Inicio de sesión, control de roles, carga solo para RRHH, gestión de usuarios</td><td>RF-006, 009, 020, 022</td><td>Must</td></tr>
+            <tr><td>Configuración</td><td>DO edita corte, tolerancia, rangos de atraso y recargos</td><td>RF-023</td><td>Must</td></tr>
+            <tr><td>Mejora futura</td><td>Alertas por correo de atrasos y ausencias</td><td>RF-027</td><td>Could</td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="contenedor">
+        <h2>No funcionales</h2>
+        <p>Cada uno tiene una medida que se puede comprobar.</p>
+        <div class="tabla">
+          <table>
+            <tr><th>ID</th><th>Categoría</th><th>Qué exige</th><th>Cómo se mide</th></tr>
+            <tr><td>RNF-001</td><td>Rendimiento</td><td>Procesar 100 colaboradores en menos de 1 minuto</td><td>Excel de 5 MB en menos de 60 s</td></tr>
+            <tr><td>RNF-002</td><td>Seguridad</td><td>Contraseñas con hash Argon2</td><td>Ninguna en texto plano</td></tr>
+            <tr><td>RNF-003</td><td>Usabilidad</td><td>Identidad visual con tokens de diseño</td><td>Cambiar paleta o logo en un solo archivo</td></tr>
+            <tr><td>RNF-004</td><td>Seguridad</td><td>Solo HTTPS y vistas según el rol</td><td>Ninguna página por HTTP</td></tr>
+            <tr><td>RNF-005</td><td>Usabilidad</td><td>Cargar un reporte y ver el resumen en 3 clics</td><td>Prueba con un usuario de RRHH</td></tr>
+            <tr><td>RNF-006</td><td>Compatibilidad</td><td>Chrome, Edge y Firefox de escritorio</td><td>Pruebas automatizadas</td></tr>
+            <tr><td>RNF-007</td><td>Compatibilidad</td><td>Aceptar los .xlsx de Z-BioTime sin conversión</td><td>Muestras cargadas sin modificar</td></tr>
+            <tr><td>RNF-008</td><td>Confiabilidad</td><td>Conservar cortes anteriores y validar archivos</td><td>Una carga con error no altera los datos</td></tr>
+            <tr><td>RNF-009</td><td>Mantenibilidad</td><td>Estructura modular y parámetros configurables</td><td>Cambiar el corte sin tocar el código</td></tr>
+            <tr><td>RNF-010</td><td>Rendimiento</td><td>Consultas del dashboard en menos de 2 s</td><td>95 % de las consultas</td></tr>
+            <tr><td>RNF-011</td><td>Disponibilidad</td><td>Disponible en horario laboral</td><td>99 %, lunes a viernes, 07:00–19:00</td></tr>
+            <tr><td>RNF-012</td><td>Respaldo</td><td>Respaldo diario, conservar los últimos 30</td><td>Restauración probada una vez</td></tr>
+            <tr><td>RNF-013</td><td>Privacidad</td><td>Cumplir la LOPDP de Ecuador y registrar accesos</td><td>Auditoría de sesiones, cargas y exportaciones</td></tr>
+            <tr><td>RNF-014</td><td>Accesibilidad</td><td>Buen contraste y diseño desde 1366 px</td><td>Contraste AA (4.5:1)</td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 NETTPLUS · Especificación definida v3.0</footer>
+</body>
+</html>

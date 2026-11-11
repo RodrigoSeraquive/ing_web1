@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tecnología · NETTPLUS</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor barra-navegacion">
+      <a class="marca" href="../index.html"><img src="../imagenes/logo.svg" alt="Logo"><b>NETT<span>PLUS</span></b></a>
+      <nav>
+        <a href="../index.html">Inicio</a>
+        <a href="requerimientos.html">Requerimientos</a>
+        <a href="pantallas.html">Pantallas</a>
+        <a class="enlace-activo" href="tecnologia.html">Tecnología</a>
+        <a href="datos.html">Datos</a>
+        <a href="decisiones.html">Decisiones</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero corto">
+      <div class="contenedor">
+        <h1>Tecnología definida</h1>
+        <p>Herramientas gratuitas, de uso común en la UTPL y fáciles de mantener por un equipo pequeño.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="contenedor">
+        <div class="tabla">
+          <table>
+            <tr><th>Capa</th><th>Tecnología</th><th>Para qué se usa</th></tr>
+            <tr><td>Frontend</td><td>React 18 + Vite + TypeScript</td><td>Aplicación web de una sola página</td></tr>
+            <tr><td>Estilos</td><td>Tailwind CSS con tokens de marca</td><td>Paleta, tipografía y logo reemplazables</td></tr>
+            <tr><td>Gráficos</td><td>Recharts</td><td>Indicadores de asistencia, headcount y rotación</td></tr>
+            <tr><td>Backend</td><td>Python 3.12 + FastAPI</td><td>API REST y reglas de negocio</td></tr>
+            <tr><td>Excel</td><td>pandas + openpyxl</td><td>Leer los reportes de Z-BioTime y exportar a .xlsx</td></tr>
+            <tr><td>PDF</td><td>ReportLab</td><td>Resumen de nómina y panel de indicadores</td></tr>
+            <tr><td>Base de datos</td><td>PostgreSQL 16 (SQLite en local)</td><td>Empleados, horarios, marcaciones y usuarios</td></tr>
+            <tr><td>Acceso a datos</td><td>SQLAlchemy + Alembic</td><td>Modelos y migraciones versionadas</td></tr>
+            <tr><td>Autenticación</td><td>JWT en cookie HttpOnly + Argon2</td><td>Sesión por rol y contraseñas cifradas</td></tr>
+            <tr><td>Pruebas</td><td>pytest, Postman y Playwright</td><td>Reglas de negocio, API y pantallas en 3 navegadores</td></tr>
+            <tr><td>Despliegue</td><td>Docker Compose + Nginx con HTTPS</td><td>Un servidor único, solo por HTTPS</td></tr>
+            <tr><td>Diseño</td><td>Figma y Enterprise Architect</td><td>Prototipo, casos de uso y UML</td></tr>
+            <tr><td>Versiones</td><td>Git y GitHub</td><td>Trabajo en equipo con ramas por funcionalidad</td></tr>
+          </table>
+        </div>
+        <div class="nota">La capa de ingesta queda separada para sustituir la carga de Excel por una API de Z-BioTime en el futuro.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 NETTPLUS · Especificación definida v3.0</footer>
+</body>
+</html>

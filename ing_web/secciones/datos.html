@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Datos · NETTPLUS</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor barra-navegacion">
+      <a class="marca" href="../index.html"><img src="../imagenes/logo.svg" alt="Logo"><b>NETT<span>PLUS</span></b></a>
+      <nav>
+        <a href="../index.html">Inicio</a>
+        <a href="requerimientos.html">Requerimientos</a>
+        <a href="pantallas.html">Pantallas</a>
+        <a href="tecnologia.html">Tecnología</a>
+        <a class="enlace-activo" href="datos.html">Datos</a>
+        <a href="decisiones.html">Decisiones</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero corto">
+      <div class="contenedor">
+        <h1>Modelo de datos</h1>
+        <p>Nueve tablas bastan para el MVP.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="contenedor">
+        <div class="tabla">
+          <table>
+            <tr><th>Tabla</th><th>Campos principales</th><th>Relación</th></tr>
+            <tr><td>usuario</td><td>nombre, correo, hash de contraseña, rol, activo</td><td>Registra las cargas</td></tr>
+            <tr><td>area</td><td>nombre</td><td>Agrupa empleados</td></tr>
+            <tr><td>empleado</td><td>cédula (única), id_zbiotime, nombre, área, líder, fechas de ingreso y salida</td><td>Pertenece a un área</td></tr>
+            <tr><td>horario</td><td>empleado, fecha, hora de entrada y salida, tipo (fijo o turno)</td><td>Un registro por empleado y día</td></tr>
+            <tr><td>marcacion</td><td>empleado, fecha y hora, tipo, forma (rostro, huella, móvil)</td><td>Referencia a la carga</td></tr>
+            <tr><td>solicitud</td><td>empleado, tipo, fechas, motivo, estado (aprobado, pendiente, rechazado)</td><td>Referencia a la carga</td></tr>
+            <tr><td>carga</td><td>usuario, fecha y hora, archivos, registros procesados, errores</td><td>Origen de los datos</td></tr>
+            <tr><td>movimiento_personal</td><td>empleado, tipo (alta o baja), fecha, área, motivo</td><td>Alimenta headcount y rotación</td></tr>
+            <tr><td>configuracion</td><td>clave, valor (corte, tolerancia, rangos, recargos, columnas)</td><td>La lee el motor de cálculo</td></tr>
+          </table>
+        </div>
+        <div class="nota">Toda tabla de hechos guarda la carga que la originó. Eso permite reemplazar datos por fecha sin duplicar y auditar cada carga.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 NETTPLUS · Especificación definida v3.0</footer>
+</body>
+</html>

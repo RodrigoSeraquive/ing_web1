@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pantallas · NETTPLUS</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor barra-navegacion">
+      <a class="marca" href="../index.html"><img src="../imagenes/logo.svg" alt="Logo"><b>NETT<span>PLUS</span></b></a>
+      <nav>
+        <a href="../index.html">Inicio</a>
+        <a href="requerimientos.html">Requerimientos</a>
+        <a class="enlace-activo" href="pantallas.html">Pantallas</a>
+        <a href="tecnologia.html">Tecnología</a>
+        <a href="datos.html">Datos</a>
+        <a href="decisiones.html">Decisiones</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero corto">
+      <div class="contenedor">
+        <h1>Pantallas y permisos por rol</h1>
+        <p>El sitio tiene 10 pantallas. Cada rol solo ve el menú que le corresponde.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="contenedor">
+        <div class="tabla">
+          <table>
+            <tr><th>Pantalla</th><th>Qué hace</th><th>RRHH</th><th>Contabilidad</th><th>DO</th></tr>
+            <tr><td>1. Inicio de sesión</td><td>Usuario y contraseña</td><td class="si">Sí</td><td class="si">Sí</td><td class="si">Sí</td></tr>
+            <tr><td>2. Carga de reportes</td><td>Subir los 5 tipos de Excel y validar</td><td class="si">Sí</td><td class="no">No</td><td class="no">No</td></tr>
+            <tr><td>3. Historial de cargas</td><td>Fecha, usuario, archivos y errores</td><td class="si">Sí</td><td class="no">No</td><td>Solo lectura</td></tr>
+            <tr><td>4. Dashboard diario</td><td>Totales, ausentes, atrasos, horas extras y vacaciones de una fecha</td><td class="si">Sí</td><td class="no">No</td><td>Solo lectura</td></tr>
+            <tr><td>5. Detalle de colaborador</td><td>Marcaciones, turno y novedades del corte</td><td class="si">Sí</td><td class="no">No</td><td>Solo lectura</td></tr>
+            <tr><td>6. Resumen de nómina</td><td>Resumen por colaborador y exportación a Excel y PDF</td><td class="no">No</td><td class="si">Sí</td><td class="no">No</td></tr>
+            <tr><td>7. Indicadores</td><td>Atrasos, ausentismo, horas extras, headcount y rotación</td><td class="no">No</td><td class="no">No</td><td class="si">Sí</td></tr>
+            <tr><td>8. Altas y bajas</td><td>Registro y carga de movimientos de personal</td><td class="no">No</td><td class="no">No</td><td class="si">Sí</td></tr>
+            <tr><td>9. Usuarios</td><td>Crear, editar y desactivar usuarios</td><td class="no">No</td><td class="no">No</td><td class="si">Sí</td></tr>
+            <tr><td>10. Configuración</td><td>Corte, tolerancia, recargos y formato de exportación</td><td class="no">No</td><td>Solo formato</td><td class="si">Sí</td></tr>
+          </table>
+        </div>
+        <div class="nota"><b>Pantalla de inicio por rol:</b> RRHH entra al Dashboard diario, Contabilidad al Resumen de nómina y DO a Indicadores. No existe un cuarto rol administrador: son tres roles.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 NETTPLUS · Especificación definida v3.0</footer>
+</body>
+</html>

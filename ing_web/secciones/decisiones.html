@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Decisiones · NETTPLUS</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor barra-navegacion">
+      <a class="marca" href="../index.html"><img src="../imagenes/logo.svg" alt="Logo"><b>NETT<span>PLUS</span></b></a>
+      <nav>
+        <a href="../index.html">Inicio</a>
+        <a href="requerimientos.html">Requerimientos</a>
+        <a href="pantallas.html">Pantallas</a>
+        <a href="tecnologia.html">Tecnología</a>
+        <a href="datos.html">Datos</a>
+        <a class="enlace-activo" href="decisiones.html">Decisiones</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero corto">
+      <div class="contenedor">
+        <h1>Decisiones de cierre</h1>
+        <p>Cada punto pendiente de la v2.0 queda resuelto con un valor por defecto configurable, así que cambiarlo no exige reprogramar.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="contenedor">
+        <div class="tabla">
+          <table>
+            <tr><th>#</th><th>Punto</th><th>Decisión por defecto</th><th>Estado</th></tr>
+            <tr><td>1</td><td>Formato de nómina</td><td>Exportación estándar por colaborador, columnas reordenables</td><td>A confirmar con Contabilidad</td></tr>
+            <tr><td>2</td><td>Colores y logo</td><td>Paleta provisional con variables CSS</td><td>A confirmar con Nettplus</td></tr>
+            <tr><td>3</td><td>Tolerancia de atraso</td><td>5 min de gracia; leve 6–15, moderado 16–30, grave más de 30</td><td>A confirmar con DO</td></tr>
+            <tr><td>4</td><td>Hora de almuerzo</td><td>No se controla en el MVP</td><td class="si">Cerrado</td></tr>
+            <tr><td>5</td><td>Horas extras</td><td>El menor valor entre lo aprobado y lo marcado; recargos 50 % y 100 %</td><td>A validar con Contabilidad</td></tr>
+            <tr><td>6</td><td>Justificaciones tardías</td><td>Recarga ilimitada durante el día</td><td class="si">Cerrado</td></tr>
+            <tr><td>7</td><td>Identificador único</td><td>Cédula como llave; ID de Z-BioTime como enlace</td><td>A confirmar</td></tr>
+            <tr><td>8</td><td>Altas y bajas</td><td>DO las registra por formulario o Excel histórico</td><td class="si">Cerrado</td></tr>
+            <tr><td>9</td><td>Vacaciones</td><td>Tipo «Vacaciones» con estado Aprobado</td><td>A confirmar con muestras reales</td></tr>
+            <tr><td>10</td><td>Alertas por correo</td><td>Fuera del MVP (mejora futura)</td><td class="si">Cerrado</td></tr>
+            <tr><td>11</td><td>Indicadores adicionales</td><td>Ausentismo, atrasos y horas extras por área</td><td class="si">Cerrado</td></tr>
+            <tr><td>12</td><td>Usuarios de gerencia</td><td>Sin usuario; DO exporta el panel a PDF</td><td class="si">Cerrado</td></tr>
+            <tr><td>13</td><td>Muestras de archivos</td><td>El prototipo usa datos ficticios</td><td>Pendiente de Nettplus</td></tr>
+            <tr><td>14</td><td>Stack de desarrollo</td><td>Definido en la página Tecnología</td><td>A confirmar con docentes</td></tr>
+          </table>
+        </div>
+        <div class="nota">Se resolvió una inconsistencia de la v2.0: DO consulta todo y administra usuarios y configuración, pero no carga archivos. La carga es solo de RRHH.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 NETTPLUS · Especificación definida v3.0</footer>
+</body>
+</html>
