@@ -1,11 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Prueba</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4f46e5, #06b6d4);
+            color: white;
+            text-align: center;
+            padding-top: 80px;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>¡Funciona!</h1>
+    <p>Si ves esta página, tu servidor está bien configurado.</p>
+    <button id="btn">Haz clic aquí</button>
+    <p id="mensaje"></p>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", function () {
+            document.getElementById("mensaje").textContent = "El JavaScript también funciona 🎉";
+        });
+    </script>
 </body>
 </html>
