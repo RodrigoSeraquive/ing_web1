@@ -1,0 +1,64 @@
+/* ===== 1. VARIABLES: los colores de Nettplus (se cambian solo aquí) ===== */
+:root{
+  --azul:#2a43b5; --azul-oscuro:#1c2c87; --verde:#6cc02c; --verde-btn:#3b8a12;
+  --fondo:#f4f7fb; --texto:#0f172a; --suave:#475569; --borde:#dbe3ef;
+}
+
+/* ===== 2. BASE: quita márgenes y define la tipografía general ===== */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,"Segoe UI",sans-serif;background:var(--fondo);color:var(--texto);line-height:1.6}
+a{color:inherit;text-decoration:none}
+h2{font-size:1.7rem;margin-bottom:8px}
+p{color:var(--suave)}
+section{padding:56px 0}
+.contenedor{width:min(1050px,92%);margin-inline:auto} /* centra y limita el ancho */
+
+/* ===== 3. ENCABEZADO: la barra de arriba, igual en todas las páginas ===== */
+.encabezado{background:var(--azul-oscuro);color:#fff;position:sticky;top:0;z-index:10}
+.barra-navegacion{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;min-height:68px}
+.marca{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.2rem}
+.marca img{height:36px}
+.marca span{color:var(--verde)}
+nav{display:flex;gap:22px;flex-wrap:wrap}
+nav a{font-weight:600;opacity:.85;padding:4px 0}
+nav a:hover{opacity:1}
+.enlace-activo{color:var(--verde);opacity:1;border-bottom:3px solid var(--verde)} /* página actual */
+
+/* ===== 4. HERO: la franja de color con el título de cada página ===== */
+.hero{color:#fff;padding:72px 0;background:linear-gradient(120deg,var(--azul-oscuro),var(--azul) 60%,var(--verde) 160%)}
+.hero.corto{padding:44px 0} /* versión más baja para las páginas internas */
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center} /* texto + panel */
+.panel{background:#fff;color:var(--texto);border-radius:18px;padding:24px;box-shadow:0 14px 34px rgba(0,0,0,.28)}
+.panel h3{font-size:.95rem;color:var(--suave);margin-bottom:14px}
+.cifras{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cifras div{background:var(--fondo);border-radius:12px;padding:14px;text-align:center;font-size:.8rem;color:var(--suave)}
+.cifras b{display:block;font-size:1.9rem;color:var(--azul)}
+.hero h1{font-size:clamp(1.9rem,4vw,2.8rem);line-height:1.15;margin:12px 0}
+.hero h1 span{color:var(--verde)}
+.hero p{color:#e6ecff}
+.etiqueta{display:inline-block;background:rgba(255,255,255,.16);padding:5px 14px;border-radius:99px;font-size:.8rem;font-weight:700}
+.boton{display:inline-block;margin-top:22px;background:var(--verde-btn);color:#fff;padding:12px 26px;border-radius:99px;font-weight:700}
+.boton:hover{background:#2f700d}
+
+/* ===== 5. TARJETAS: cajas con título y texto (cifras, roles, bloques) ===== */
+.tarjetas{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:24px}
+.tarjeta{background:#fff;border:1px solid var(--borde);border-top:4px solid var(--verde);border-radius:14px;padding:22px;transition:.2s}
+.tarjeta:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(15,23,42,.12)}
+.tarjeta h3{margin-bottom:6px}
+.numero{display:block;font-size:2.3rem;font-weight:800;color:var(--azul)}
+
+/* ===== 6. TABLAS: encabezado azul y filas alternadas ===== */
+.tabla{overflow-x:auto;margin-top:24px}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--borde)}
+th,td{padding:11px 14px;text-align:left;font-size:.9rem;border-bottom:1px solid var(--borde)}
+th{background:var(--azul);color:#fff}
+tr:nth-child(even) td{background:var(--fondo)}
+.si{color:#15803d;font-weight:700}
+.no{color:#b91c1c;font-weight:700}
+
+/* ===== 7. NOTA Y PIE ===== */
+.nota{background:#fff;border-left:5px solid var(--verde);padding:16px 20px;border-radius:8px;margin-top:24px}
+footer{text-align:center;padding:28px 0;background:#fff;border-top:1px solid var(--borde);color:var(--suave);font-size:.88rem}
+
+/* ===== 8. CELULAR: reduce espacios en pantallas pequeñas ===== */
+@media(max-width:800px){.hero-grid{grid-template-columns:1fr}.hero{padding:48px 0}section{padding:40px 0}}
